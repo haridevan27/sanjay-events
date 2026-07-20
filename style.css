@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: #050208;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+
+.welcome-page {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            #24152b 0%,
+            #0c0711 45%,
+            #030204 100%
+        );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+/* CANVAS */
+
+#lightfall {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 0;
+}
+
+
+/* DARK OVERLAY */
+
+.overlay {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            transparent 15%,
+            rgba(0, 0, 0, 0.35) 70%,
+            rgba(0, 0, 0, 0.75) 100%
+        );
+
+    pointer-events: none;
+}
+
+
+/* CONTENT */
+
+.welcome-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: 90%;
+    max-width: 1000px;
+
+    animation: fadeUp 1.5s ease;
+}
+
+
+/* WELCOME TO */
+
+.welcome-heading {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 25px;
+
+    margin-bottom: 22px;
+}
+
+
+.welcome-heading span {
+    width: 130px;
+    height: 1px;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            #c9972e,
+            transparent
+        );
+}
+
+
+.welcome-heading h1 {
+    font-family: 'Cinzel', serif;
+
+    font-size: clamp(32px, 5vw, 62px);
+
+    font-weight: 500;
+
+    letter-spacing: 10px;
+
+    color: #e8c76a;
+
+    text-shadow:
+        0 0 5px rgba(232, 199, 106, 0.45);
+}
+
+
+/* LOGO */
+
+.logo {
+    width: 330px;
+    max-width: 65vw;
+
+    height: auto;
+
+    display: block;
+
+    margin: 0 auto 12px;
+
+    border: none;
+    outline: none;
+
+    filter:
+        drop-shadow(0 0 8px rgba(245, 197, 66, 0.65))
+        drop-shadow(0 0 20px rgba(245, 197, 66, 0.3));
+}
+
+
+/* BRAND LINE */
+
+.brand-line {
+    font-family: 'Cinzel', serif;
+
+    font-size: 13px;
+
+    letter-spacing: 5px;
+
+    color: #d9ae43;
+}
+
+
+.brand-line span {
+    margin: 0 12px;
+
+    color: #fff0a4;
+}
+
+
+/* TAGLINE */
+
+.tagline {
+    margin-top: 25px;
+}
+
+
+.tagline p {
+    font-size: 20px;
+
+    letter-spacing: 2px;
+
+    color: #eeeeee;
+}
+
+
+.tagline h2 {
+    margin-top: 5px;
+
+    font-family: 'Great Vibes', cursive;
+
+    font-size: clamp(35px, 5vw, 58px);
+
+    font-weight: 400;
+
+    color: #e3b53d;
+}
+
+
+/* BUTTON */
+
+.explore-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    margin-top: 30px;
+
+    padding: 15px 35px;
+
+    min-width: 220px;
+
+    border-radius: 40px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d49a1d,
+            #ffe99b,
+            #dca32b
+        );
+
+    color: #17100a;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    box-shadow:
+        0 0 15px rgba(245, 197, 66, 0.45);
+
+    transition: 0.4s ease;
+}
+
+
+.explore-btn span {
+    font-size: 23px;
+
+    transition: 0.4s ease;
+}
+
+
+.explore-btn:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 0 25px rgba(245, 197, 66, 0.8);
+}
+
+
+.explore-btn:hover span {
+    transform: translateX(8px);
+}
+
+
+/* ANIMATION */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .welcome-heading {
+        gap: 10px;
+    }
+
+
+    .welcome-heading span {
+        width: 35px;
+    }
+
+
+    .welcome-heading h1 {
+        font-size: 25px;
+
+        letter-spacing: 4px;
+    }
+
+
+    .logo {
+        width: 270px;
+    }
+
+
+    .brand-line {
+        font-size: 9px;
+
+        letter-spacing: 2px;
+    }
+
+
+    .brand-line span {
+        margin: 0 5px;
+    }
+
+
+    .tagline p {
+        font-size: 15px;
+    }
+
+
+    .tagline h2 {
+        font-size: 38px;
+    }
+}
+.site-footer {
+
+    padding: 60px 8% 45px;
+
+    display: grid;
+
+    grid-template-columns:
+    2fr 1fr 1fr;
+
+    gap: 60px;
+
+    background: #0b0710;
+
+    border-top: 1px solid
+    rgba(245, 197, 66, 0.2);
+
+}
+.footer-brand h2 {
+
+    font-family: 'Cinzel', serif;
+
+    color: #e6b83e;
+
+    font-size: 28px;
+
+    letter-spacing: 5px;
+
+}
+
+
+.footer-brand p {
+
+    margin-top: 5px;
+
+    color: #aaa;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+}
+
+
+.footer-brand span {
+
+    display: block;
+
+    margin-top: 25px;
+
+    color: #777;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+}
+.site-footer h3 {
+
+    margin-bottom: 20px;
+
+    color: #e6b83e;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    font-weight: 500;
+
+}
+.footer-links {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+}
+
+
+.footer-links a {
+
+    color: #aaa;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s ease;
+
+}
+
+
+.footer-links a:hover {
+
+    color: #e6b83e;
+
+    transform: translateX(5px);
+
+}
+.footer-contact {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+}
+
+
+.footer-contact p {
+
+    color: #aaa;
+
+    font-size: 11px;
+
+}
+.footer-bottom {
+
+    padding: 18px 8%;
+
+    text-align: center;
+
+    background: #08050d;
+
+    border-top: 1px solid
+    rgba(245, 197, 66, 0.1);
+
+    color: #666;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+}
+@media (max-width: 700px) {
+
+    .site-footer {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        padding: 45px 7% 35px;
+
+    }
+
+}
