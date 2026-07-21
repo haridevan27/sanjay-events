@@ -11,36 +11,47 @@
     <title>Sanjai Event Management</title>
     <style>
 
-/* =========================
-   MOBILE RESPONSIVE
-========================= */
-
 @media (max-width: 600px) {
 
-
-    /* NAVBAR */
+    /* =========================
+       MOBILE NAVBAR
+    ========================= */
 
     .navbar {
 
-        height: 75px;
+        position: relative;
 
-        padding: 0 5%;
+        height: auto;
+
+        min-height: 90px;
+
+        padding: 18px 5%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 18px;
 
     }
 
 
     .logo-text {
 
-        font-size: 19px;
+        font-size: 20px;
 
         letter-spacing: 3px;
+
+        text-align: center;
 
     }
 
 
     .logo-text span {
 
-        font-size: 6px;
+        font-size: 7px;
 
         letter-spacing: 2px;
 
@@ -49,19 +60,44 @@
 
     nav {
 
-        display: none;
+        display: flex;
+
+        width: 100%;
+
+        justify-content: center;
+
+        gap: 18px;
+
+        flex-wrap: wrap;
+
+    }
+
+
+    nav a {
+
+        font-size: 9px;
+
+        letter-spacing: 1px;
 
     }
 
 
     .book-btn {
 
-        display: none;
+        display: inline-block;
+
+        padding: 10px 16px;
+
+        font-size: 9px;
+
+        letter-spacing: 1px;
 
     }
 
 
-    /* HERO */
+    /* =========================
+       HERO
+    ========================= */
 
     .hero {
 
@@ -69,7 +105,7 @@
 
         height: auto;
 
-        padding: 110px 7% 60px;
+        padding: 70px 7% 60px;
 
         display: flex;
 
@@ -81,8 +117,6 @@
 
     }
 
-
-    /* HERO CONTENT */
 
     .hero-content {
 
@@ -137,7 +171,9 @@
     }
 
 
-    /* BUTTONS */
+    /* =========================
+       BUTTONS
+    ========================= */
 
     .hero-buttons {
 
@@ -171,7 +207,9 @@
     }
 
 
-    /* RIGHT IMAGE */
+    /* =========================
+       HERO IMAGE
+    ========================= */
 
     .hero-image {
 
@@ -199,7 +237,9 @@
     }
 
 
-    /* FOOTER */
+    /* =========================
+       FOOTER
+    ========================= */
 
     .site-footer {
 
@@ -214,26 +254,7 @@
     }
 
 
-    .footer-brand h2 {
-
-        font-size: 25px;
-
-    }
-
-
-    .footer-brand span {
-
-        font-size: 10px;
-
-    }
-
-
-    .footer-links {
-
-        align-items: center;
-
-    }
-
+    .footer-links,
 
     .footer-contact {
 
@@ -255,18 +276,27 @@
 }
 
 
-/* =========================
-   EXTRA SMALL MOBILE
-========================= */
-
 @media (max-width: 380px) {
 
+    nav {
 
-    .hero {
+        gap: 12px;
 
-        padding-left: 5%;
+    }
 
-        padding-right: 5%;
+
+    nav a {
+
+        font-size: 8px;
+
+    }
+
+
+    .book-btn {
+
+        font-size: 8px;
+
+        padding: 9px 13px;
 
     }
 
@@ -277,31 +307,9 @@
 
     }
 
-
-    .description {
-
-        font-size: 12px;
-
-    }
-
-
-    .hero-image {
-
-        margin-top: 35px;
-
-    }
-
-
-    .hero-image img {
-
-        max-height: 230px;
-
-    }
-
 }
 
 </style>
-
     <link rel="stylesheet"
           href="home.css">
 
